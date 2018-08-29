@@ -13,7 +13,7 @@ node {
    }
    stage('docker build/push') {
      docker.withRegistry('https://hub.docker.com/v2', 'dockerhub') {
-       def app = docker.build("madhavi/docker-nodejs-demo:${commit_id}", '.').push()
+       def app = docker.build("madhu1312/docker-nodejs-demo:${commit_id}", '.').push()
      }
    }
 }
